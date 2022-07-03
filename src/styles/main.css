@@ -1,0 +1,12 @@
+.signup-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.signup-text-holder h1 {
+    font-size: 40px;
+}
+
+.signup-text-holder h1 div {
+    color: #4C15F6;
+}
