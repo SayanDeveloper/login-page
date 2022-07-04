@@ -7,9 +7,9 @@ function Main() {
         <div className='signup-card'>
             <div className='signup-text-holder'>
                 <h1>The best offer <div>for your business</div></h1>
-                <div>
-                    
-                </div>
+                <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident recusandae vero esse ut voluptatum porro alias voluptas assumenda minima nulla labore, voluptatem ad aspernatur. Sint autem a id in voluptatum.
+                </p>
             </div>
             <Form />
         </div>

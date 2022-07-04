@@ -1,12 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .signup-card {
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 50px 80px;
+    min-height: calc(100vh - 150px);
+}
+
+.signup-text-holder {
+    width: calc(50% - 50px);
 }
 
 .signup-text-holder h1 {
-    font-size: 40px;
+    font-size: 55px;
+    color: #4f4f4f;
+    margin-bottom: 50px;
 }
 
 .signup-text-holder h1 div {
     color: #4C15F6;
+}
+
+.signup-text-holder p {
+    line-height: 32px;
+    font-size: 18px;
+    color: #7a8193;
+}
+
+/* responsivneess */
+
+@media screen and (min-width: 1600px) {
+    .signup-card {
+        padding: 100px 160px;
+        min-height: calc(100vh - 250px);
+    }
+    .signup-text-holder h1 {
+        font-size: 65px;
+    }
+    .signup-text-holder p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .signup-card {
+        padding: 100px 200px;
+    }
+    .signup-text-holder h1 {
+        font-size: 75px;
+    }
+    .signup-text-holder p {
+        font-size: 22px;
+    }
 }

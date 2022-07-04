@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebookF, faGithub, faTwitter, faGoogle } from '@fortawesome/free-brands-svg-icons'
+import { signInWithGoogle, signInWithFb, signInWithTwitter, signInWithGithub } from "../firebase";
 import '../styles/form.css'
 
 function Form() {
@@ -13,6 +14,30 @@ function Form() {
     const formHandling = (e) => {
         e.preventDefault();
         alert(`Welcome ${firstName} ${secondName}! You have successfully signed in.`);
+    }
+
+    const googleSignInHandler = () => {
+        signInWithGoogle()
+            .then((result) => alert(`Welcome ${result.user.displayName}!`))
+            .catch(err => console.log(err.message));
+    }
+
+    const fbSignInHandler = () => {
+        signInWithFb()
+            .then((result) => alert(`Welcome ${result.user.displayName}!`))
+            .catch(err => console.log(err.message));
+    }
+
+    const twitterSignInHandler = () => {
+        signInWithTwitter()
+            .then((result) => alert(`Welcome ${result.user.displayName}!`))
+            .catch(err => console.log(err.message));
+    }
+
+    const githubSignInHandler = () => {
+        signInWithGithub()
+            .then((result) => alert(`Welcome ${result.user.displayName}!`))
+            .catch(err => console.log(err.message));
     }
 
     return (
@@ -62,10 +87,10 @@ function Form() {
                 or sign up with:
             </div>
             <div className='oauth-icons-holder'>
-                <span><FontAwesomeIcon icon={faFacebookF} /></span>
-                <span><FontAwesomeIcon icon={faGoogle} /></span>
-                <span><FontAwesomeIcon icon={faTwitter} /></span>
-                <span><FontAwesomeIcon icon={faGithub} /></span>
+                <span onClick={fbSignInHandler}><FontAwesomeIcon icon={faFacebookF} /></span>
+                <span onClick={googleSignInHandler}><FontAwesomeIcon icon={faGoogle} /></span>
+                <span onClick={twitterSignInHandler}><FontAwesomeIcon icon={faTwitter} /></span>
+                <span onClick={githubSignInHandler}><FontAwesomeIcon icon={faGithub} /></span>
             </div>
         </form>
     )
