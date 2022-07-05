@@ -89,3 +89,25 @@
         font-size: 20px;
     }
 }
+
+@media screen and (max-width: 950px) {
+    .form-holder {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .form-holder {
+        width: 100%;
+        padding: 60px 25px;
+    }
+    .name-conatainer {
+        flex-direction: column;
+    }
+    .name-conatainer input {
+        width: calc(100% - 20px);
+    }
+    .name-conatainer input:first-child {
+        margin-bottom: 30px;
+    }
+}

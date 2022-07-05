@@ -55,3 +55,36 @@
         font-size: 22px;
     }
 }
+
+@media screen and (max-width: 1100px) {
+    .signup-card {
+        padding: 40px 50px;
+    }
+    .signup-text-holder h1 {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .signup-card {
+        flex-direction: column;
+    }
+    .signup-text-holder {
+        text-align: center !important;
+        width: 100%;
+    }
+    .signup-text-holder h1 {
+        margin-top: 20px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .signup-text-holder h1 {
+        font-size: 35px;
+    }
+    .signup-text-holder p {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 40px;
+    }
+}
